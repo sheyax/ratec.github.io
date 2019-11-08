@@ -1,0 +1,68 @@
+{% extends 'eventcyrcle/base.html' %}
+{% block content %}
+
+
+<main class="container">
+
+
+	<section class="mero container">
+	<h1> Our Story</h1>
+	<p>Our company started at the university coffee shop when we decided to jump into a hackathon organized by our good friend. We started brainstorming and on different challenges and occasionally came up with the same idea inspired by one of our events. <br></p>
+​
+<p>The idea was simple: last night we had 150 visitors at the event, however, we could speak only to 10 random people there. But who were others? <br></p>
+​
+<p>Next week we came to the hackathon and successfully did lose it, but this defeat became a start for 'Treffenmeet' </p>
+</section>
+
+
+<section class="kero container">
+	<h1>What we Offer</h1>
+	<div class="kero_subsub">
+<div class="kero_sub">
+	<h2>Event List</h2>
+	<p>Simple and convenient list<br>of people who surround you</p>
+
+	<h2>Smart Ads</h2>
+	<p>We are not gonna spam your event with ads,<br> instead we will make it smart</p>
+
+	<h2>Social Impact</h2>
+	<p>Running NGO or social enterprise? <br>We have some special for you!</p>
+	</div>
+	
+	<figure class="mockk">
+		{% load static %}
+	<img id="mockk" src="{% static "eventcyrcle/phone-mock@2x.png" %}" alt="Mockup of app"  width="300px">
+</figure>
+</div>
+</section>
+
+<section class="sero container">
+	<h1 class="cards"> E-Business Card</h1>
+	<div class="sero_subb">
+	<div class="sero_sub">
+	
+	<p>Save using paper with our digital business cards and reach more potential partners faster .</p>
+	<a href="">Learn More</a>
+	</div>
+	<figure class="e-card">
+	<img src="{% static "eventcyrcle/E-business-card@2x.png" %} " alt="Business Card Mock up">
+</figure>
+</div>
+</section>
+
+
+<section class="team container">
+	<h1>TreffenMeet Team</h1>
+	<div class="info">
+	<img id="vit" src="{% static "eventcyrcle/vitalii.png" %}">
+	<h3>Vitalii</h3>
+	<p>Co-founder/ Backend Developer</p>
+</div>
+<div class="info">
+	<img src="{% static "eventcyrcle/sheyi.png" %}">
+	<h3>Sheyi</h3>
+	<p>Co-founder/ Frontend Developer</p>
+</div>
+</section>
+	</main>
+{% endblock %}

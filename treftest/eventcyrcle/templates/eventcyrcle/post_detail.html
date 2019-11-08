@@ -1,0 +1,17 @@
+{% extends "eventcyrcle/base.html" %}
+{% block content %}
+    <article class="media content-section" id="post-container" >
+        <img id="user-profile" class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+        <div class="media-body" id="titles">
+          <h2><a class="article-title" href="#">{{ object.name }}</a></h2>
+          <h4> Company:</h4>
+          <p class="article-content"> {{ object.company }}</p>
+          <h4>Company Type:</h4>
+          <p class="article-content"> {{ object.ctype }}</p>
+          <h4> Industry:</h4>
+          <p class="article-content"> {{ object.industry }}</p>
+          <h4> Interests:</h4>
+          <p class="article-content">{{ object.Interest }}</p>
+        </div>
+    </article>
+{% endblock %}

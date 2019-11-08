@@ -1,0 +1,22 @@
+{% extends "eventcyrcle/base.html" %}
+{% block content %}
+<div id="recommend">
+<h1 >Upcoming Events</h1>
+</div> 
+<div id="post-container">
+{% for ourevents in events %}
+    <article class="media content-section" id="media-content" >
+        <img id="profile" class="rounded-circle article-img" src="{{ ourevents.organizer.profile.image.url }}">
+        <div class="media-body" id="details">
+            {% if user.is_authenticated %}
+              <h2><a class="article-title" href="{% url 'event-testinfopage' %}">{{ ourevents.event_name }}</a></h2>
+            {% else %}
+            <h2><a class="article-title" href="{% url 'register' %}">{{ ourevents.event_name }}</a></h2>
+            {% endif %}
+            <p class="article-content">{{ ourevents.info }}</p>
+            <p id="post-date" class="article-content">{{ ourevents.date_of_event }}</p>
+        </div>
+    </article>
+{% endfor %}
+</div>
+{% endblock %}

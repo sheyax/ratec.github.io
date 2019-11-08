@@ -1,0 +1,26 @@
+{% extends "eventcyrcle/base.html" %}
+
+{% block content %}
+<div id="recommend">
+<h2 >We recommend</h2>
+</div> 
+<div id="post-container">
+
+  <p id="postinfo"> These are people you might want to meet at our event</p>
+
+{% for post in posts %}
+
+    <article class="media content-section" id="user-content">
+        <img class="rounded-circle article-img" id="user-profile" src="{{ post.author.profile.image.url }}">
+        <div class="media-body" id="profile-detail">
+          <h2><a class="article-title" href='{% url "post-detail" post.id %}'>{{ post.name }}</a></h2>
+          <p class="article-content" id="small-detail">{{ post.company }}, {{ post.ctype }}, {{ post.industry }}, {{ post.Interest }}</p>
+          <!--<p class="article-content">{{ post.ctype }}</p>
+          <p class="article-content">{{ post.industry }}</p>
+          <p class="article-content">{{ post.Interest }}</p> -->
+        </div>
+    </article>
+    
+{% endfor %}
+</div>
+{% endblock %}
